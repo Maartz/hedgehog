@@ -29,6 +29,7 @@ defmodule Streamer.MixProject do
       {:websockex, "~> 0.4.2"},
       {:jason, "~> 1.2"},
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
-   ]
+      {:phoenix_pubsub, "~> 2.0"}
+    ]
   end
 end
