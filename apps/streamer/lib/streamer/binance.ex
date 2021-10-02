@@ -1,8 +1,7 @@
 defmodule Streamer.Binance do
   use WebSockex
-  require Logger
 
-  alias Naive
+  require Logger
 
   @stream_endpoint "wss://stream.binance.com:9443/ws/"
 
@@ -46,7 +45,7 @@ defmodule Streamer.Binance do
 
     Phoenix.PubSub.broadcast(
       Streamer.PubSub,
-      "trade_events:#{trade_event.symbol}",
+      "TRADE_EVENTS:#{trade_event.symbol}",
       trade_event
     )
   end
